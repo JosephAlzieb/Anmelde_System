@@ -2,17 +2,16 @@ package termin;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 public class Termin {
     private Long id;
-    private LocalDate anmeldeFrist;
+    private LocalDateTime anmeldeFrist;
     private LocalDateTime von;
     private LocalDateTime bis;
     private String titel ;
     private Gruppe gruppe;
 
-    public Termin(Long id, LocalDate anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel, Gruppe gruppe) {
+    public Termin(Long id, LocalDateTime anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel, Gruppe gruppe) {
         this.id = id;
         this.anmeldeFrist = anmeldeFrist;
         this.von = von;
@@ -21,16 +20,9 @@ public class Termin {
         this.gruppe = gruppe;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Termin)) return false;
-        Termin termin = (Termin) o;
-        return id == termin.id;
+    // Anmeldefrist sollte ein Tag, bevor der Termin beginnt, beendet werden.
+    public boolean ist_anmeldeFrist_abgelaufen(LocalDateTime now){
+        return anmeldeFrist.isBefore(now);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }
