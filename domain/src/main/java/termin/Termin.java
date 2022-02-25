@@ -1,7 +1,7 @@
 package termin;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+
+ import java.time.LocalDateTime;
 
 public class Termin {
     private Long id;
@@ -9,15 +9,14 @@ public class Termin {
     private LocalDateTime von;
     private LocalDateTime bis;
     private String titel ;
-    private Gruppe gruppe;
 
-    public Termin(Long id, LocalDateTime anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel, Gruppe gruppe) {
+    public Termin(Long id, LocalDateTime anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel) {
         this.id = id;
         this.anmeldeFrist = anmeldeFrist;
         this.von = von;
         this.bis = bis;
         this.titel = titel;
-        this.gruppe = gruppe;
+
     }
 
     // Anmeldefrist sollte ein Tag, bevor der Termin beginnt, beendet werden.
