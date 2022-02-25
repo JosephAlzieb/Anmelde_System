@@ -1,4 +1,4 @@
-package termin;
+package gruppe;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -22,6 +22,6 @@ public class TestMatrikelNummer {
     @Test
     @DisplayName("Matrikelnummer enthält Buchstaben, es ist nicht erlaubt")
     void test_3(){
-        assertThat(MatrikelNummer.istMatrikelNr("1234HJ")).isTrue();
+        assertThat(MatrikelNummer.istMatrikelNr("1234HJ")).isFalse();
     }
 }

@@ -16,7 +16,7 @@ public class TestTermin {
         LocalDateTime frist = LocalDateTime.of(2022,2,22, 0,0);
         LocalDateTime von = LocalDateTime.of(2022,2,23, 12,0);
         LocalDateTime bis = LocalDateTime.of(2022,2,23, 14,0);
-        Termin t = new Termin(1L,frist,von,bis,"praktisch Übung 1", new Gruppe(1L));
+        Termin t = new Termin(1L,frist,von,bis,"praktisch Übung 1");
         LocalDateTime now = LocalDateTime.of(2022,2,21, 0,0);
         assertThat(t.ist_anmeldeFrist_abgelaufen(now)).isFalse();
     }
@@ -27,7 +27,7 @@ public class TestTermin {
         LocalDateTime frist = LocalDateTime.of(2022,2,22,21,0);
         LocalDateTime von = LocalDateTime.of(2022,2,23, 12,0);
         LocalDateTime bis = LocalDateTime.of(2022,2,23, 14,0);
-        Termin t = new Termin(1L,frist,von,bis,"praktisch Übung 1", new Gruppe(1L));
+        Termin t = new Termin(1L,frist,von,bis,"praktisch Übung 1");
         LocalDateTime now = LocalDateTime.of(2022,2,23, 23,0);
 
 
