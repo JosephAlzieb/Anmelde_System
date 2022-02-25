@@ -12,17 +12,25 @@ class Gruppe {
 
     public Gruppe(Long id) {
         this.id = id;
-        this.anzahlPlaeze = 5;
+        this.anzahlPlaeze = 3;
     }
 
     public void addUser(String gihubHandle, String name, String matrikelNummer){
-        if(anzahlPlaeze > 0){
+        if(hat_noch_plaeze()){
             users.add(new User(gihubHandle,name,matrikelNummer));
             anzahlPlaeze --;
         }
         else {
             System.out.println("Gruppe ist voll");
         }
+    }
+
+    public boolean hat_noch_plaeze() {
+        return anzahlPlaeze > 0;
+    }
+
+    public int getGruppenGroeße(){
+        return users.size();
     }
 
     @Override
