@@ -1,13 +1,13 @@
-package termin;
+package gruppe;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-
-class Gruppe {
+public class Gruppe {
 
     private Long id;
     private int anzahlPlaeze;
-    private Set<User> users;
+    private Set<User> users = new HashSet<>();
 
 
     public Gruppe(Long id) {
@@ -38,7 +38,7 @@ class Gruppe {
         if (this == o) return true;
         if (!(o instanceof Gruppe)) return false;
         Gruppe gruppe = (Gruppe) o;
-        return id == gruppe.id;
+        return id.equals(gruppe.id);
     }
 
     @Override
