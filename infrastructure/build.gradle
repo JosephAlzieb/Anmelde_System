@@ -30,6 +30,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.testcontainers:junit-jupiter'
     testImplementation 'org.testcontainers:mariadb'
+    testImplementation('com.tngtech.archunit:archunit-junit5-engine:0.22.0')
 }
 
 dependencyManagement {
