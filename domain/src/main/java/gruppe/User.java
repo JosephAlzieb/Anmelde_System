@@ -1,14 +1,24 @@
-package termin;
+package gruppe;
 
 class User {
     private String gihubHandle;
     private String name;
     private MatrikelNummer matrikelNummer;
+    private Rollen rolle ;
 
     public User(String gihubHandle, String name, String matrikelNummer) {
         this.gihubHandle = gihubHandle;
         this.name = name;
         this.matrikelNummer = MatrikelNummer.getMatrikelNummer(matrikelNummer).get();
+        this.rolle = Rollen.STUDENT;
+    }
+
+    public Rollen getRolle() {
+        return rolle;
+    }
+
+    public void setRolle(String rolle) {
+        this.rolle = Rollen.valueOf(rolle.toUpperCase());
     }
 
     public String getGihubHandle() {
