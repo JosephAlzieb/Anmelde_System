@@ -5,12 +5,12 @@ import java.util.Set;
 
 class Gruppe {
 
-    private int id;
+    private Long id;
     private int anzahlPlaeze;
     private Set<User> users;
 
 
-    public Gruppe(int id) {
+    public Gruppe(Long id) {
         this.id = id;
         this.anzahlPlaeze = 5;
     }

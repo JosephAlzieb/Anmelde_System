@@ -5,14 +5,14 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Termin {
-    private int id;
+    private Long id;
     private LocalDate anmeldeFrist;
     private LocalDateTime von;
     private LocalDateTime bis;
     private String titel ;
     private Gruppe gruppe;
 
-    public Termin(int id, LocalDate anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel, Gruppe gruppe) {
+    public Termin(Long id, LocalDate anmeldeFrist, LocalDateTime von, LocalDateTime bis, String titel, Gruppe gruppe) {
         this.id = id;
         this.anmeldeFrist = anmeldeFrist;
         this.von = von;
