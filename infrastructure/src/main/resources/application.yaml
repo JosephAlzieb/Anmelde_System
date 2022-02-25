@@ -1,0 +1,11 @@
+spring:
+  flyway:
+    schemas: database
+    create-schemas: true
+    url: jdbc:mariadb://localhost:3308/
+    user: root
+    password: iamgroot
+  datasource:
+    url: jdbc:mariadb://localhost:3308/database
+    username: root
+    password: iamgroot
