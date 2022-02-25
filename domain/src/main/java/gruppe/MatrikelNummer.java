@@ -1,4 +1,4 @@
-package termin;
+package gruppe;
 
 import java.util.Optional;
 
