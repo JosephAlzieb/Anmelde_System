@@ -47,4 +47,28 @@ public class Gruppe {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public int getAnzahlPlaeze() {
+        return anzahlPlaeze;
+    }
+
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setAnzahlPlaeze(int anzahlPlaeze) {
+        this.anzahlPlaeze = anzahlPlaeze;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 }
