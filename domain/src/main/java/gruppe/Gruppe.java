@@ -15,13 +15,15 @@ public class Gruppe {
         this.anzahlPlaeze = 3;
     }
 
-    public void addUser(String gihubHandle, String name, String matrikelNummer){
+    public Gruppe addUser(String gihubHandle, String name, String matrikelNummer){
         if(hat_noch_plaeze()){
             users.add(new User(gihubHandle,name,matrikelNummer));
             anzahlPlaeze --;
+            return new Gruppe(id);
         }
         else {
             System.out.println("Gruppe ist voll");
+            return null;
         }
     }
 
