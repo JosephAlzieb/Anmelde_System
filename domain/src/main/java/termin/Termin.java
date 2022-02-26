@@ -24,4 +24,43 @@ public class Termin {
         return anmeldeFrist.isBefore(now);
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDateTime getAnmeldeFrist() {
+        return anmeldeFrist;
+    }
+
+    public void setAnmeldeFrist(LocalDateTime anmeldeFrist) {
+        this.anmeldeFrist = anmeldeFrist;
+    }
+
+    public LocalDateTime getVon() {
+        return von;
+    }
+
+    public void setVon(LocalDateTime von) {
+        this.von = von;
+    }
+
+    public LocalDateTime getBis() {
+        return bis;
+    }
+
+    public void setBis(LocalDateTime bis) {
+        this.bis = bis;
+    }
+
+    public String getTitel() {
+        return titel;
+    }
+
+    public void setTitel(String titel) {
+        this.titel = titel;
+    }
 }
