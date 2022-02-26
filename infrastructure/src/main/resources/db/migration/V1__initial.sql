@@ -22,12 +22,13 @@ create table if not exists gruppe
 
 create table user
 (
+    Id int auto_increment,
     gihub varchar(30) not null,
     name varchar(30) not null,
     matrikelnummer int not null,
     gruppeId int not null,
     constraint user_pk
-        primary key (gihub),
+        primary key (Id),
     constraint user_gruppe_Id_fk
         foreign key (gruppeId) references gruppe (Id)
             on update cascade on delete cascade
