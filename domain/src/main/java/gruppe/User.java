@@ -1,6 +1,6 @@
 package gruppe;
 
-class User {
+public class User {
     private String gihubHandle;
     private String name;
     private MatrikelNummer matrikelNummer;
