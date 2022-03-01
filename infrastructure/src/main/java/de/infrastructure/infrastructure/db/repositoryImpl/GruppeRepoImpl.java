@@ -18,12 +18,19 @@ public class GruppeRepoImpl implements GruppeRepository {
 
     @Override
     public Gruppe getGruppeById(Long id) {
-        return null;
+        GruppeDto dto = repoDao.findById(id).get();
+        Gruppe gruppe = new Gruppe(dto.getId());
+        return gruppe;
     }
 
     @Override
     public void saveGruppe(Gruppe gruppe) {
-
+        GruppeDto dto = repoDao.findById(gruppe.getId()).get();
+        Set<UserDto> userDtos = gruppe.getUsers().stream().map(u->new UserDto(u.getGihubHandle(),u.getName(),u.getMatrikelNummer().getNr())).collect(Collectors.toSet());
+        dto.setUsers(userDtos);
+        System.out.println(dto);
+        System.out.println(userDtos);
+//        repoDao.save(dto);
     }
 
     @Override
@@ -33,6 +40,10 @@ public class GruppeRepoImpl implements GruppeRepository {
 
     @Override
     public List<Gruppe> gellAllGruppen() {
-        return null;
+        return repoDao.findAll().stream().map(g->getGruppe(g)).collect(Collectors.toList());
+    }
+
+    private Gruppe getGruppe(GruppeDto g) {
+        return new Gruppe(g.getId());
     }
 }
