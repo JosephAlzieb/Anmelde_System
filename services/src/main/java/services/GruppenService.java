@@ -19,8 +19,10 @@ public class GruppenService {
     public void saveGruppe (Gruppe gruppe){
         repository.saveGruppe(gruppe);
     }
-    public void addUserToGruppe(String gihubHandle, String name, String matrikelNummer){
-        repository.addUser(gihubHandle,name,matrikelNummer);
+    public void addUserToGruppe(Long gruppeId,String gihubHandle, String name, String matrikelNummer){
+        if(gruppeId==null || gihubHandle == null || name == null ||matrikelNummer == null) return;
+        Gruppe gruppe = repository.getGruppeById(gruppeId).addUser(gihubHandle,name,matrikelNummer);
+        repository.saveGruppe(gruppe);
     }
     public List<Gruppe> gellAllGruppen(){
         return repository.gellAllGruppen();
