@@ -5,12 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 17
-      - name: Change wrapper permissions
-        run: chmod +x ./gradlew
+          java-version: 11
       - name: Run Tests
         run: ./gradlew check
