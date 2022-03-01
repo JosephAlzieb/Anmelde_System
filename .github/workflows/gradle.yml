@@ -14,6 +14,6 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 13
+          java-version: 17
       - name: Run Tests
         run: ./gradlew check
