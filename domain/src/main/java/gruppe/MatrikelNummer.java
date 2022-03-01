@@ -2,7 +2,7 @@ package gruppe;
 
 import java.util.Optional;
 
-class MatrikelNummer {
+public class MatrikelNummer {
     private final String nr;
 
     private MatrikelNummer(String nr) {
@@ -31,5 +31,9 @@ class MatrikelNummer {
 
     public static boolean istMatrikelNr (String matrikelNr){
         return hat_nur_ziffern(matrikelNr.trim()) && hat_richtige_laenge(matrikelNr.trim());
+    }
+
+    public String getNr() {
+        return nr;
     }
 }
