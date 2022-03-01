@@ -10,5 +10,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - name: Run Tests
-        run: ./gradlew check
+      - name: Change wrapper permissions
+        run: chmod +x ./gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
