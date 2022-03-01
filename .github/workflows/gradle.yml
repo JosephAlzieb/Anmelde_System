@@ -12,5 +12,5 @@ jobs:
           java-version: 17
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Run Tests
+        run: ./gradlew check
